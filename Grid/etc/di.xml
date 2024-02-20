@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+  <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+    <arguments>
+      <argument name="collections" xsi:type="array">
+        <item name="tejas_grid_feedback_listing_data_source" xsi:type="string">TejasGridFeedbackCollection</item>
+      </argument>
+    </arguments>
+  </type>
+  <virtualType name="TejasGridFeedbackCollection" type="Tejas\Grid\Ui\DataProvider\Feedback\Collection">
+    <arguments>
+      <argument name="mainTable" xsi:type="string">tejas_form_data</argument>
+      <argument name="resourceModel" xsi:type="string">Tejas\Grid\Model\ResourceModel\Feedback</argument>
+    </arguments>
+  </virtualType>
+</config>
